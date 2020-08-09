@@ -90,6 +90,7 @@ export const Portfolio = styled.section`
   grid-template-columns: 1fr 2fr;
   grid-gap: 24px;
   padding: 96px 0;
+  position: relative;
 `;
 
 export const PortfolioNav = styled.aside``;
@@ -99,6 +100,8 @@ export const NavButtons = styled.div`
   flex-direction: column;
   font-size: 14px;
   font-weight: 700;
+  position: sticky;
+  top: 32px;
 `;
 
 export const Button = styled.button<ButtonProps>`
@@ -130,5 +133,5 @@ export const PortfolioMosaic = styled.div`
   display: grid;
   grid-gap: 24px;
   flex: 1;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(320px, 1fr));
 `;
