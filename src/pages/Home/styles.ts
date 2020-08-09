@@ -86,15 +86,13 @@ export const CVLink = styled.a`
 `;
 
 export const Portfolio = styled.section`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 24px;
   padding: 96px 0;
 `;
 
-export const PortfolioNav = styled.aside`
-  max-width: 176px;
-  margin-right: 90px;
-`;
+export const PortfolioNav = styled.aside``;
 
 export const NavButtons = styled.div`
   display: flex;
@@ -132,5 +130,5 @@ export const PortfolioMosaic = styled.div`
   display: grid;
   grid-gap: 24px;
   flex: 1;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 `;
