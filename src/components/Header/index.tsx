@@ -11,7 +11,9 @@ const Header: React.FC = () => (
   <S.Header>
     <GridContainer>
       <S.Nav>
-        <S.Logo src={logoIcon} alt="Voltar para home" />
+        <S.ReturnHome to="/">
+          <S.Logo src={logoIcon} alt="Voltar para home" />
+        </S.ReturnHome>
         <S.Avatar src={avatarImg} alt="Avatar - Diego Braga" />
       </S.Nav>
     </GridContainer>
