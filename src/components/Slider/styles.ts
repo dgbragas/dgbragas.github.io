@@ -10,9 +10,16 @@ const arrowButtonStyles = css`
   padding: 16px;
   position: absolute;
   top: 0;
+  z-index: 1;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
 `;
 
 export const Slider = styled.div`
+  border-radius: 10px;
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -28,11 +35,6 @@ export const ArrowLeft = styled.button`
     rgba(16, 16, 16, 0) 100%
   );
   left: 0;
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
-  }
 `;
 
 export const Content = styled.div<ContentProps>`
@@ -44,6 +46,11 @@ export const Content = styled.div<ContentProps>`
     min-height: 100%;
     min-width: 100%;
     pointer-events: none;
+
+    > * {
+      width: 100%;
+      height: 100%;
+    }
   }
 `;
 
@@ -68,7 +75,7 @@ export const Dot = styled.button`
 export const ArrowRight = styled.button`
   ${arrowButtonStyles};
   background: linear-gradient(
-    90deg,
+    270deg,
     rgba(16, 16, 16, 0.4) 0%,
     rgba(16, 16, 16, 0) 100%
   );

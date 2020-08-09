@@ -5,7 +5,11 @@ import { ReactComponent as ArrowRight } from '../../assets/icons/arrow-right.svg
 
 import * as S from './styles';
 
-const Slider: React.FC = () => {
+interface SliderProps {
+  images: string[];
+}
+
+const Slider: React.FC<SliderProps> = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentOffset, setCurrentOffset] = useState(0);
 
@@ -33,23 +37,19 @@ const Slider: React.FC = () => {
         <ArrowLeft />
       </S.ArrowLeft>
       <S.Content offsetWidth={currentOffset}>
-        <div>
-          <h1 style={{ color: 'white' }}>Hello 1</h1>
-        </div>
-        <div>
-          <h1 style={{ color: 'white' }}>Hello 2</h1>
-        </div>
-        <div>
-          <h1 style={{ color: 'white' }}>Hello 3</h1>
-        </div>
-        <div>
-          <h1 style={{ color: 'white' }}>Hello 4</h1>
-        </div>
+        {images.map((image, index) => (
+          <div>
+            <img src={image} alt={`${index}º imagem`} />
+          </div>
+        ))}
         {/* <S.Dots>
           <S.Dot />
         </S.Dots> */}
       </S.Content>
-      <S.ArrowRight onClick={toggleNextSlide} disabled={false}>
+      <S.ArrowRight
+        onClick={toggleNextSlide}
+        disabled={currentSlide + 1 > images.length}
+      >
         <ArrowRight />
       </S.ArrowRight>
     </S.Slider>
