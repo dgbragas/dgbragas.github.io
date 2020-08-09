@@ -10,7 +10,6 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider theme={themeColors}>
-      <h1>Hello World</h1>
       <Routes />
       <GlobalStyle />
     </ThemeProvider>
