@@ -29,14 +29,10 @@ const Slider: React.FC = () => {
 
   return (
     <S.Slider ref={sliderRef}>
-      <S.ArrowLeft
-        sliderWidth={500}
-        onClick={togglePreviousSlide}
-        disabled={currentSlide === 0}
-      >
+      <S.ArrowLeft onClick={togglePreviousSlide} disabled={currentSlide === 0}>
         <ArrowLeft />
       </S.ArrowLeft>
-      <S.Content>
+      <S.Content offsetWidth={currentOffset}>
         <div>
           <h1 style={{ color: 'white' }}>Hello 1</h1>
         </div>
@@ -49,18 +45,11 @@ const Slider: React.FC = () => {
         <div>
           <h1 style={{ color: 'white' }}>Hello 4</h1>
         </div>
-        <div>
-          <h1 style={{ color: 'white' }}>Hello 5</h1>
-        </div>
-        <S.Dots>
+        {/* <S.Dots>
           <S.Dot />
-        </S.Dots>
+        </S.Dots> */}
       </S.Content>
-      <S.ArrowRight
-        sliderWidth={500}
-        onClick={toggleNextSlide}
-        disabled={false}
-      >
+      <S.ArrowRight onClick={toggleNextSlide} disabled={false}>
         <ArrowRight />
       </S.ArrowRight>
     </S.Slider>
