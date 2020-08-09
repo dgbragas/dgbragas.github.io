@@ -101,9 +101,6 @@ export const NavButtons = styled.div`
   flex-direction: column;
   font-size: 14px;
   font-weight: 700;
-
-  button {
-  }
 `;
 
 export const Button = styled.button<ButtonProps>`
@@ -134,5 +131,6 @@ export const Button = styled.button<ButtonProps>`
 export const PortfolioMosaic = styled.div`
   display: grid;
   grid-gap: 24px;
+  flex: 1;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 `;
