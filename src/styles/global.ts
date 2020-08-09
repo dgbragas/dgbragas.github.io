@@ -18,7 +18,7 @@ export default createGlobalStyle`
     }
 
     html, body, #root {
-      background-color: '#000';
+      background-color: ${({ theme: { colors } }) => colors.darkBody};
       min-height: 100%;
     }
 
