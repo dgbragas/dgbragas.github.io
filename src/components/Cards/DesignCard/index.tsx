@@ -7,11 +7,12 @@ interface AppsCardProps {
     pathname: string;
     state?: {
       images: string[];
-      title: string;
+      title: string | undefined;
       full_description: string;
+      previewURL: string | undefined;
     };
   };
-  title: string;
+  title: string | undefined;
   client: string;
   imageURL: string;
 }

@@ -5,7 +5,7 @@ import { ReactComponent as GithubIcon } from '../../../assets/icons/github.svg';
 import * as S from './styles';
 
 interface AppsCardProps {
-  redirectTo: string;
+  redirectTo: string | undefined;
   title: string;
   description: string;
 }
