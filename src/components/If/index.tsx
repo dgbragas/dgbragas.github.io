@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 
 interface IfProps {
-  children: ReactElement;
+  children: any;
   condition: boolean;
 }
 

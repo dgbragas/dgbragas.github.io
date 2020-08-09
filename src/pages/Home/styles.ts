@@ -93,7 +93,9 @@ export const Portfolio = styled.section`
   position: relative;
 `;
 
-export const PortfolioNav = styled.aside``;
+export const PortfolioNav = styled.aside`
+  margin-top: 16px;
+`;
 
 export const NavButtons = styled.div`
   display: flex;
