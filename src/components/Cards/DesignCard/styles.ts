@@ -4,12 +4,12 @@ import { Link as RouterLink } from 'react-router-dom';
 export const Link = styled(RouterLink)`
   border-radius: 5px;
   display: block;
-  height: 320px;
+  min-height: 320px;
   overflow: hidden;
   position: relative;
   text-decoration: none;
   transition: transform 0.3s ease;
-  width: 320px;
+  min-width: 320px;
 
   &:hover {
     transform: scale(1.05);
