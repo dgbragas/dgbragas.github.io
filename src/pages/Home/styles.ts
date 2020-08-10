@@ -40,6 +40,7 @@ export const SocialLink = styled.a`
   color: ${({ theme: { colors } }) => colors.texts};
   font-weight: 700;
   position: relative;
+  text-decoration: none;
   transition: all 0.3s ease;
 
   & + a {
@@ -72,6 +73,7 @@ export const CVLink = styled.a`
   font-weight: 700;
   margin-left: 102px !important;
   position: relative;
+  text-decoration: none;
   transition: color 0.3s ease;
 
   &:hover {

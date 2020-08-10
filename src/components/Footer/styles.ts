@@ -71,6 +71,7 @@ export const Link = styled.a`
   display: flex;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
+  text-decoration: none;
   transition: all 0.3s ease;
 
   &:disabled {

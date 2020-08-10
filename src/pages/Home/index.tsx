@@ -97,9 +97,18 @@ const Home: React.FC = () => {
         </S.Description>
 
         <S.Social>
-          <S.SocialLink>Instagram</S.SocialLink>
-          <S.SocialLink>LinkedIn</S.SocialLink>
-          <S.CVLink>Currículo profissional</S.CVLink>
+          <S.SocialLink href="https://instagram.com/dgbragas" target="_blank">
+            Instagram
+          </S.SocialLink>
+          <S.SocialLink href="https://linkedin.com/in/dgbragas" target="_blank">
+            LinkedIn
+          </S.SocialLink>
+          <S.CVLink
+            href="https://drive.google.com/file/d/1YT0bBXnjol1hVq0yjdoBXKDF8UxjneBc/view?usp=sharing"
+            target="_blank"
+          >
+            Currículo profissional
+          </S.CVLink>
         </S.Social>
       </S.Introduction>
 

@@ -16,12 +16,12 @@ const Footer: React.FC = () => (
         <S.Follow>
           <S.Title>Acompanhe o meu trabalho</S.Title>
           <S.Links>
-            <S.Link>
+            <S.Link href="https://dribbble.com/dgbragas/" target="_blank">
               <DribbbleIcon />
               Dribbble
             </S.Link>
 
-            <S.Link>
+            <S.Link href="https://instagram.com/dgbragas" target="_blank">
               <InstagramIcon />
               Instagram
             </S.Link>
@@ -31,12 +31,12 @@ const Footer: React.FC = () => (
         <S.NextStop>
           <S.Title>Próxima parada</S.Title>
           <S.Links>
-            <S.Link>
+            <S.Link href="https://linkedin.com/in/dgbragas" target="_blank">
               <LinkedinIcon />
               LinkedIn
             </S.Link>
 
-            <S.Link>
+            <S.Link href="https://wa.me/+5511995579405" target="_blank">
               <WhatsappIcon />
               WhatsApp
             </S.Link>
