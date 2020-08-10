@@ -1,4 +1,9 @@
 import styled, { css } from 'styled-components';
+import media, { generateMedia } from 'styled-media-query';
+
+const customMedia = generateMedia({
+  tablet: '900px',
+});
 
 interface ButtonProps {
   isCurrent: boolean;
@@ -91,6 +96,14 @@ export const Portfolio = styled.section`
   grid-gap: 24px;
   padding: 96px 0;
   position: relative;
+
+  ${media.lessThan('large')`
+    grid-template-columns: .5fr 2fr;
+  `}
+
+  ${customMedia.lessThan('tablet')`
+    grid-template-columns: 1fr;
+  `}
 `;
 
 export const PortfolioNav = styled.aside`
@@ -136,4 +149,19 @@ export const PortfolioMosaic = styled.div`
   grid-gap: 24px;
   flex: 1;
   grid-template-columns: repeat(3, minmax(320px, 1fr));
+
+  ${media.lessThan('large')`
+    grid-template-columns: repeat(2, 320px);
+
+  `}
+
+  ${customMedia.lessThan('tablet')`
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+  `}
+
+  ${media.lessThan('medium')`
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  `}
 `;

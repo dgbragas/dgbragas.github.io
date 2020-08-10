@@ -1,15 +1,28 @@
 import styled from 'styled-components';
+import { generateMedia } from 'styled-media-query';
+
+const customMedia = generateMedia({
+  tablet: '900px',
+});
 
 export const Wrapper = styled.section`
   display: grid;
   grid-gap: 32px;
   grid-template-columns: 1.5fr 1fr;
   padding: 104px 0 128px;
+
+  ${customMedia.lessThan('tablet')`
+    grid-template-columns: 1fr;
+  `}
 `;
 
 export const ProjectSlide = styled.div`
   height: 700px;
   width: 100%;
+
+  ${customMedia.lessThan('tablet')`
+    height: auto;
+  `}
 `;
 
 export const ProjectInfos = styled.div`

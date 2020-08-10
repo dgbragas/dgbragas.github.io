@@ -28,6 +28,8 @@ const Home: React.FC = () => {
   const [projects, setProjects] = useState<ProjectProps[]>([]);
   const [currentFilter, setCurrentFilter] = useState('all');
 
+  const isTablet = useMedia({ maxWidth: 900 });
+
   useEffect(() => {
     (async () => {
       const { data } = await api.get('/users/dgbragas/repos');
@@ -101,39 +103,45 @@ const Home: React.FC = () => {
         </S.Social>
       </S.Introduction>
 
-      {/* <Select
-        name="filters"
-        defaultValue="all"
-        label="Filtre projetos por..."
-        options={[
-          { value: 'all', label: 'Todos trabalhos' },
-          { value: 'design', label: 'UI Design' },
-          { value: 'apps', label: 'Apps' },
-        ]}
-      /> */}
-
       <S.Portfolio>
         <S.PortfolioNav>
-          <S.NavButtons>
-            <S.Button
-              isCurrent={currentFilter === 'all'}
-              onClick={() => setCurrentFilter('all')}
-            >
-              Todos trabalhos
-            </S.Button>
-            <S.Button
-              isCurrent={currentFilter === 'design'}
-              onClick={() => setCurrentFilter('design')}
-            >
-              UI Design
-            </S.Button>
-            <S.Button
-              isCurrent={currentFilter === 'apps'}
-              onClick={() => setCurrentFilter('apps')}
-            >
-              Apps
-            </S.Button>
-          </S.NavButtons>
+          <If condition={isTablet}>
+            <Select
+              name="filters"
+              defaultValue="all"
+              label="Filtre projetos por..."
+              value={currentFilter}
+              onChange={({ target }) => setCurrentFilter(target.value)}
+              options={[
+                { value: 'all', label: 'Todos trabalhos' },
+                { value: 'design', label: 'UI Design' },
+                { value: 'apps', label: 'Apps' },
+              ]}
+            />
+          </If>
+
+          <If condition={!isTablet}>
+            <S.NavButtons>
+              <S.Button
+                isCurrent={currentFilter === 'all'}
+                onClick={() => setCurrentFilter('all')}
+              >
+                Todos
+              </S.Button>
+              <S.Button
+                isCurrent={currentFilter === 'design'}
+                onClick={() => setCurrentFilter('design')}
+              >
+                UI Design
+              </S.Button>
+              <S.Button
+                isCurrent={currentFilter === 'apps'}
+                onClick={() => setCurrentFilter('apps')}
+              >
+                Apps
+              </S.Button>
+            </S.NavButtons>
+          </If>
         </S.PortfolioNav>
 
         <S.PortfolioMosaic>
