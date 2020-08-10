@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import media, { generateMedia } from 'styled-media-query';
+
+const customMedia = generateMedia({
+  tablet: '900px',
+});
 
 export const Wrapper = styled.footer`
   background-color: ${({ theme: { colors } }) => colors.darkFooter};
@@ -18,9 +23,15 @@ export const Wrapper = styled.footer`
 
 export const Social = styled.div`
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   display: flex;
   padding-bottom: 80px;
+
+  ${media.lessThan('medium')`
+    align-items: flex-start;
+    flex-direction: column;
+  `}
 `;
 
 export const Follow = styled.div`
@@ -34,12 +45,21 @@ export const Title = styled.h3`
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 24px;
+
+  ${media.lessThan('medium')`
+    margin-bottom: 32px;
+  `}
 `;
 
 export const Links = styled.div`
   align-items: center;
   color: ${({ theme: { colors } }) => colors.texts};
   display: flex;
+
+  ${media.lessThan('medium')`
+    align-items: flex-start;
+    flex-direction: column;
+  `}
 `;
 
 export const Link = styled.a`
@@ -78,9 +98,23 @@ export const Link = styled.a`
       transition: all 0.3s ease;
     }
   }
+
+  ${media.lessThan('medium')`
+    & + a, & + button {
+      margin-top: 24px;
+    }
+  `}
 `;
 
-export const NextStop = styled.div``;
+export const NextStop = styled.div`
+  ${customMedia.lessThan('tablet')`
+    margin-top: 40px;
+  `}
+
+  ${media.lessThan('medium')`
+    margin-top: 64px;
+  `}
+`;
 
 export const Copyright = styled.p`
   color: ${({ theme: { colors } }) => colors.texts};
