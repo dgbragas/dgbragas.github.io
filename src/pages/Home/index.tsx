@@ -97,8 +97,8 @@ const Home: React.FC = () => {
         </S.Description>
 
         <S.Social>
-          <S.SocialLink href="https://instagram.com/dgbragas" target="_blank">
-            Instagram
+          <S.SocialLink href="https://github.com/dgbragas" target="_blank">
+            GitHub
           </S.SocialLink>
           <S.SocialLink href="https://linkedin.com/in/dgbragas" target="_blank">
             LinkedIn
