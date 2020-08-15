@@ -42,13 +42,10 @@ const Slider: React.FC<SliderProps> = ({ images }) => {
             <img src={image} alt={`${index}º imagem`} />
           </div>
         ))}
-        {/* <S.Dots>
-          <S.Dot />
-        </S.Dots> */}
       </S.Content>
       <S.ArrowRight
         onClick={toggleNextSlide}
-        disabled={currentSlide + 1 > images.length}
+        disabled={currentSlide + 1 > images.length - 1}
       >
         <ArrowRight />
       </S.ArrowRight>

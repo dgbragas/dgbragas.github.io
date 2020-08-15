@@ -14,7 +14,7 @@ const arrowButtonStyles = css`
 
   &:disabled {
     cursor: not-allowed;
-    opacity: 0.4;
+    opacity: 0.1;
   }
 `;
 
@@ -39,6 +39,7 @@ export const ArrowLeft = styled.button`
 
 export const Content = styled.div<ContentProps>`
   display: flex;
+  position: relative;
   transform: ${({ offsetWidth }) => `translateX(-${offsetWidth}px)`};
   transition: all 0.5s linear;
 
@@ -52,24 +53,6 @@ export const Content = styled.div<ContentProps>`
       height: 100%;
     }
   }
-`;
-
-export const Dots = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-`;
-
-export const Dot = styled.button`
-  background-color: red;
-  border: 0;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
 `;
 
 export const ArrowRight = styled.button`
