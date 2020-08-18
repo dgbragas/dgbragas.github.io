@@ -92,8 +92,8 @@ const Home: React.FC = () => {
           ABC, São Paulo
         </S.Title>
         <S.Description>
-          Entregando as melhores soluções às companhias através de uma stack
-          focada em tecnologia e design.
+          Entregando as melhores soluções para companhias através de uma stack
+          focada em Tecnologia e Design.
         </S.Description>
 
         <S.Social>
