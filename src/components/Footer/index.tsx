@@ -42,7 +42,7 @@ const Footer: React.FC = () => (
             </S.Link>
 
             <S.Link as="button" disabled>
-              Portfólio
+              Code/Drops
             </S.Link>
 
             <S.Link as="button" disabled>

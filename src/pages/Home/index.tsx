@@ -104,7 +104,7 @@ const Home: React.FC = () => {
             LinkedIn
           </S.SocialLink>
           <S.CVLink
-            href="https://drive.google.com/file/d/1YT0bBXnjol1hVq0yjdoBXKDF8UxjneBc/view?usp=sharing"
+            href="https://drive.google.com/file/d/1utSmkb-WGns5hloKmTXD1fPLk8k1cz5V/view?usp=sharing"
             target="_blank"
           >
             Currículo profissional
