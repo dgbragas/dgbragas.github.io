@@ -56,6 +56,11 @@ import Post14_Image01 from './14-post/image-01.png';
 import Post14_Image02 from './14-post/image-02.png';
 import Post14_Image03 from './14-post/image-03.png';
 
+import Post15_Image01 from './15-post/image-01.png';
+import Post15_Image02 from './15-post/image-02.png';
+import Post15_Image03 from './15-post/image-03.png';
+import Post15_Image04 from './15-post/image-04.png';
+
 export {
   Post01_Image01,
   Post01_Image02,
@@ -101,4 +106,8 @@ export {
   Post14_Image01,
   Post14_Image02,
   Post14_Image03,
+  Post15_Image01,
+  Post15_Image02,
+  Post15_Image03,
+  Post15_Image04,
 };

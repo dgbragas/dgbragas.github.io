@@ -43,6 +43,10 @@ import {
   Post14_Image01,
   Post14_Image02,
   Post14_Image03,
+  Post15_Image01,
+  Post15_Image02,
+  Post15_Image03,
+  Post15_Image04,
 } from './images.js';
 
 const posts = [
@@ -202,6 +206,15 @@ const posts = [
       'https://www.figma.com/proto/hHi5eDCRjsbDIsiX365uTH/Cadu-Ferreira?node-id=19%3A124&scaling=min-zoom',
     type: 'design',
     images: [Post14_Image01, Post14_Image02, Post14_Image03],
+  },
+  {
+    id: 15,
+    title: 'RocketFlix',
+    name: '#ImersãoReact',
+    description:
+      'A @aluraonline promoveu a #ImersãoReact onde o foco era cada aluno criar primeira interface, o AluraFlix, utilizando a biblioteca ReactJS. Entretanto a ideia relativamente "simples" me prendeu tanta atenção que decidi refazer o layout e codificá-lo utilizando algumas abordagens que, até então, eu não tinha utilizado no desenvolvimento.',
+    type: 'design',
+    images: [Post15_Image01, Post15_Image02, Post15_Image03, Post15_Image04],
   },
 ];
 
